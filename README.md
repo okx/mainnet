@@ -1,18 +1,18 @@
 # OKExChain mainnet
 
 This repo collects the genesis and configuration files for the various OKExChain
-testnets. It exists so the [OKExChain repo](https://github.com/okex/okexchain)
+mainnet. It exists so the [OKExChain repo](https://github.com/okex/okexchain)
 does not get bogged down with large genesis files and status updates.
 
 ## Getting Started
 
-To get started with the latest testnet, see the
+To get started with the latest mainnet, see the
 [docs](https://okexchain-docs.readthedocs.io/en/latest/getting-start/join-okexchain-mainnet.html).
 
-## Testnet Status
+## mainnet Status
 Source Code: [latest released version](https://github.com/okex/okexchain/releases/tag/v0.16.0)
 
-⚠️ Latest testnet: [okexchain v0.16.0](https://github.com/okex/okexchain/releases/tag/v0.16.0) ⚠️
+⚠️ Latest mainnet: [okexchain v0.16.0](https://github.com/okex/okexchain/releases/tag/v0.16.0) ⚠️
 * *Jan 6, 2021 11:19 UTC* - okexchain-v0.16
 
 Download the [genesis file](https://raw.githubusercontent.com/okex/mainnet/main/v0.16/genesis.json)
