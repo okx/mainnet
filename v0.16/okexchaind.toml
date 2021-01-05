@@ -44,7 +44,7 @@ clean_ups_kept_days = "map[kline_m1:120 kline_m3:120 kline_m5:120]"
 clean_ups_time = "00:00:00"
 [backend.orm_engine]
 engine_type = "sqlite3"
-connect_str = "/Users/zhengchao/.okexchaind/data/sqlite3/backend.sqlite3"
+connect_str = "~/.okexchaind/data/sqlite3/backend.sqlite3"
 [stream]
 engine = ""
 klines_query_connect = ""
