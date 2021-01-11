@@ -45,7 +45,7 @@ const (
 	genesisFile     = "okexchain-genesis.json"
 
 	denomination      = common.NativeToken
-	timeGenesisString = "2020-12-04 04:00:00 -0000 UTC"
+	timeGenesisString = "2021-01-10 04:00:00 -0000 UTC"
 )
 
 // constants but can't use `const`
