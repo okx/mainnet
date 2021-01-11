@@ -42,7 +42,7 @@ const (
 	tokensPath      = "tokens"
 	accountDir      = "accounts"
 	tokenSchema     = "token.json"
-	genesisFile     = "okexchain-genesis.json"
+	genesisFile     = "genesis.json"
 
 	denomination      = common.NativeToken
 	timeGenesisString = "2021-01-10 04:00:00 -0000 UTC"
