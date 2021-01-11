@@ -335,7 +335,7 @@ max_open_connections = 3
 namespace = "tendermint"
 
 # Log file
-log_file = "/Users/zhengchao/.okexchaind/okexchaind.log"
+log_file = "~/.okexchaind/okexchaind.log"
 
 # Log stdout
 log_stdout = "true"
