@@ -279,7 +279,7 @@ func produceAppState(cdc *amino.Codec,
 	// use okt_info.json overwrite default okt into
 	genesisToken.Tokens = nil
 	genesisToken.Tokens = append(genesisToken.Tokens, tokens...)
-	genesisToken.Params.FeeIssue = sdk.ZeroFee()
+	genesisToken.Params.FeeIssue = sdk.NewDecCoin(denomination, sdk.NewInt(10))
 	genesisToken.Params.FeeMint = sdk.ZeroFee()
 	genesisToken.Params.FeeBurn = sdk.ZeroFee()
 	genesisToken.Params.FeeModify = sdk.ZeroFee()
@@ -382,7 +382,7 @@ func makeGenesisDoc(cdc *amino.Codec,
 	if err != nil {
 		panic(err)
 	}
-	genesisDoc.AppState = appStateJSON
+	genesisDoc.AppState = sdk.MustSortJSON(appStateJSON)
 	return genesisDoc
 }
 
