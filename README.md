@@ -19,7 +19,7 @@ Download the [genesis file](https://raw.githubusercontent.com/okex/mainnet/main/
 
 ```bash
 $ shasum -a 256 genesis.json
-1252b187f0e146faa3c946d6d6aed3c6acbcebc0ca3b3a56151a4348222987f8  genesis.json
+fc5203c459d527a426b2dd3b43e8112e1d33eb1727cca0996d5a75f457f4c52d  genesis.json
 ```
 
 Seed nodes:
