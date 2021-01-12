@@ -15,7 +15,7 @@ Source Code: [latest released version](https://github.com/okex/okexchain/release
 ⚠️ Latest mainnet: [okexchain v0.16.0](https://github.com/okex/okexchain/releases/tag/v0.16.0) ⚠️
 * *Jan 6, 2021 11:19 UTC* - okexchain-v0.16
 
-Download the [genesis file](https://raw.githubusercontent.com/okex/mainnet/main/v0.16/genesis.json)
+Download the [genesis file](https://raw.githubusercontent.com/okex/mainnet/main/genesis.json)
 
 ```bash
 $ shasum -a 256 genesis.json
