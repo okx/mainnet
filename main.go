@@ -12,7 +12,7 @@ import (
 
 	"github.com/okex/okexchain/app"
 	"github.com/okex/okexchain/app/codec"
-	ethermint "github.com/okex/okexchain/app/types"
+	chaintypes "github.com/okex/okexchain/app/types"
 	swap "github.com/okex/okexchain/x/ammswap"
 	"github.com/okex/okexchain/x/common"
 	"github.com/okex/okexchain/x/dex"
@@ -209,7 +209,7 @@ func makeGenesisAccounts(tokenName string, accountMap map[string]authexported.Ge
 		var ok bool
 		account, ok = accountMap[addr]
 		if !ok {
-			account = &ethermint.EthAccount{
+			account = &chaintypes.EthAccount{
 				BaseAccount: authtypes.NewBaseAccount(fromBech32(addr), sdk.DecCoins{}, nil, 0, 0),
 				CodeHash:    ethcrypto.Keccak256(nil),
 			}
