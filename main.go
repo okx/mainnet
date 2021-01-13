@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"github.com/cosmos/cosmos-sdk/x/mint"
 	"io/ioutil"
 	"path"
 	"sort"
@@ -357,6 +358,13 @@ func produceAppState(cdc *amino.Codec,
 
 	genesisFarmBz := cdc.MustMarshalJSON(genesisFarm)
 	appState[farm.ModuleName] = genesisFarmBz
+
+	// mint
+	var genesisMint = mint.DefaultGenesisState()
+	genesisMint.Params.FarmProportion = sdk.ZeroDec()
+
+	genesisMintBz := cdc.MustMarshalJSON(genesisMint)
+	appState[mint.ModuleName] = genesisMintBz
 
 	return appState
 }

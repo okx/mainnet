@@ -1958,7 +1958,7 @@
         "blocks_per_year": "10519200",
         "deflation_epoch": "3",
         "deflation_rate": "0.500000000000000000",
-        "farm_proportion": "0.500000000000000000",
+        "farm_proportion": "0.000000000000000000",
         "goal_bonded": "0",
         "inflation_max": "0",
         "inflation_min": "0",
