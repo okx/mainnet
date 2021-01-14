@@ -13,7 +13,7 @@ To get started with the latest mainnet, see the
 Source Code: [latest released version](https://github.com/okex/okexchain/releases/tag/v0.16.0)
 
 ⚠️ Latest mainnet: [okexchain v0.16.0](https://github.com/okex/okexchain/releases/tag/v0.16.0) ⚠️
-* *Jan 6, 2021 11:19 UTC* - okexchain-v0.16
+* *Jan 15, 2021 12:00 UTC* - okexchain-v0.16
 
 Download the [genesis file](https://raw.githubusercontent.com/okex/mainnet/main/genesis.json)
 
