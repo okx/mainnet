@@ -5,7 +5,7 @@ go 1.12
 require (
 	github.com/cosmos/cosmos-sdk v0.39.2
 	github.com/ethereum/go-ethereum v1.9.25
-	github.com/okex/okexchain v0.16.0
+	github.com/okex/okexchain v0.16.1
 	github.com/tendermint/go-amino v0.15.1
 	github.com/tendermint/tendermint v0.33.9
 )
