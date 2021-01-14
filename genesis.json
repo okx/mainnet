@@ -19,6 +19,62 @@
   },
   "app_hash": "",
   "app_state": {
+    "backend": null,
+    "params": {
+      "params": {
+        "max_deposit_period": "86400000000000",
+        "min_deposit": [
+          {
+            "denom": "okt",
+            "amount": "10.000000000000000000"
+          }
+        ],
+        "voting_period": "259200000000000",
+        "max_block_height": "100000"
+      }
+    },
+    "supply": {
+      "supply": []
+    },
+    "ammswap": {
+      "params": {
+        "fee_rate": "0.003000000000000000"
+      },
+      "swap_token_pair_records": null
+    },
+    "bank": {
+      "send_enabled": false
+    },
+    "slashing": {
+      "params": {
+        "signed_blocks_window": "10000",
+        "min_signed_per_window": "0.050000000000000000",
+        "downtime_jail_duration": "600000000000",
+        "slash_fraction_double_sign": "0.000000000000000000",
+        "slash_fraction_downtime": "0.000000000000000000"
+      },
+      "signing_infos": {},
+      "missed_blocks": {}
+    },
+    "staking": {
+      "params": {
+        "unbonding_time": "1209600000000000",
+        "max_bonded_validators": 21,
+        "epoch": 252,
+        "max_validators_to_add_shares": 30,
+        "bond_denom": "okt",
+        "min_delegation": "0.000100000000000000",
+        "min_self_delegation": "10000.000000000000000000"
+      },
+      "last_total_power": "0",
+      "last_validator_powers": null,
+      "validators": null,
+      "delegators": null,
+      "unbonding_delegations": null,
+      "all_shares": null,
+      "proxy_delegator_keys": null,
+      "exported": false
+    },
     "genutil": {
       "gentxs": [
         {
@@ -842,8 +898,11 @@
         }
       ]
     },
-    "bank": {
-      "send_enabled": false
+    "crisis": {
+      "constant_fee": {
+        "denom": "okt",
+        "amount": "1000.000000000000000000"
+      }
     },
     "evidence": {
       "params": {
@@ -851,57 +910,38 @@
       },
       "evidence": []
     },
-    "staking": {
+    "dex": {
       "params": {
-        "unbonding_time": "1209600000000000",
-        "max_bonded_validators": 21,
-        "epoch": 252,
-        "max_validators_to_add_shares": 30,
-        "bond_denom": "okt",
-        "min_delegation": "0.000100000000000000",
-        "min_self_delegation": "10000.000000000000000000"
-      },
-      "last_total_power": "0",
-      "last_validator_powers": null,
-      "validators": null,
-      "delegators": null,
-      "unbonding_delegations": null,
-      "all_shares": null,
-      "proxy_delegator_keys": null,
-      "exported": false
-    },
-    "params": {
-      "params": {
-        "max_deposit_period": "86400000000000",
-        "min_deposit": [
+        "list_fee": {
+          "denom": "okt",
+          "amount": "1000.000000000000000000"
+        },
+        "transfer_ownership_fee": {
+          "denom": "okt",
+          "amount": "0.000000000000000000"
+        },
+        "register_operator_fee": {
+          "denom": "okt",
+          "amount": "0.000000000000000000"
+        },
+        "delist_max_deposit_period": "86400000000000",
+        "delist_min_deposit": [
           {
             "denom": "okt",
             "amount": "10.000000000000000000"
           }
         ],
-        "voting_period": "259200000000000",
-        "max_block_height": "100000"
-      }
-    },
-    "backend": null,
-    "farm": {
-      "pools": [],
-      "lock_infos": [],
-      "historical_rewards": [],
-      "current_rewards": [],
-      "pools_yield_native_token": null,
-      "params": {
-        "quote_symbol": "usdk",
-        "create_pool_fee": {
-          "denom": "okt",
-          "amount": "0.000000000000000000"
-        },
-        "create_pool_deposit": {
-          "denom": "okt",
-          "amount": "0.000000000000000000"
-        },
-        "yield_native_token": false
-      }
+        "delist_voting_period": "259200000000000",
+        "withdraw_period": "259200000000000",
+        "ownership_confirm_window": "86400000000000"
+      },
+      "token_pairs": null,
+      "withdraw_infos": null,
+      "product_locks": {
+        "Data": {}
+      },
+      "operators": null,
+      "max_token_pair_id": "0"
     },
     "mint": {
       "minter": {
@@ -926,55 +966,6 @@
       },
       "original_minted_per_block": "1.000000000000000000"
     },
-    "token": {
-      "params": {
-        "issue_fee": {
-          "denom": "okt",
-          "amount": "0.000000000000000000"
-        },
-        "mint_fee": {
-          "denom": "okt",
-          "amount": "0.000000000000000000"
-        },
-        "burn_fee": {
-          "denom": "okt",
-          "amount": "0.000000000000000000"
-        },
-        "modify_fee": {
-          "denom": "okt",
-          "amount": "0.000000000000000000"
-        },
-        "transfer_ownership_fee": {
-          "denom": "okt",
-          "amount": "0.000000000000000000"
-        },
-        "ownership_confirm_window": "86400000000000"
-      },
-      "tokens": [
-        {
-          "description": "OKExChain Native Token",
-          "symbol": "okt",
-          "original_symbol": "okt",
-          "whole_name": "OKT",
-          "original_total_supply": "10000000.000000000000000000",
-          "type": "0",
-          "owner": "okexchain1zv0j2tf3ydze9leajgawrgn74l974pgyftad4a",
-          "mintable": false
-        }
-      ],
-      "locked_assets": null,
-      "locked_fees": null
-    },
-    "debug": null,
-    "ammswap": {
-      "params": {
-        "fee_rate": "0.003000000000000000"
-      },
-      "swap_token_pair_records": null
-    },
-    "supply": {
-      "supply": []
-    },
     "order": {
       "params": {
         "order_expire_blocks": "259200",
@@ -989,30 +980,36 @@
       },
       "open_orders": null
     },
-    "evm": {
-      "accounts": [],
-      "txs_logs": [],
-      "chain_config": {
-        "homestead_block": "0",
-        "dao_fork_block": "0",
-        "dao_fork_support": true,
-        "eip150_block": "0",
-        "eip150_hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-        "eip155_block": "0",
-        "eip158_block": "0",
-        "byzantium_block": "0",
-        "constantinople_block": "0",
-        "petersburg_block": "0",
-        "istanbul_block": "0",
-        "muir_glacier_block": "0",
-        "yoloV2_block": "-1",
-        "ewasm_block": "-1"
-      },
+    "distribution": {
       "params": {
-        "evm_denom": "okt",
-        "enable_create": false,
-        "enable_call": false,
-        "extra_eips": null
+        "community_tax": "0.020000000000000000",
+        "withdraw_addr_enabled": true
+      },
+      "fee_pool": {
+        "community_pool": []
+      },
+      "delegator_withdraw_infos": [],
+      "previous_proposer": "",
+      "validator_accumulated_commissions": []
+    },
+    "stream": null,
+    "farm": {
+      "pools": [],
+      "lock_infos": [],
+      "historical_rewards": [],
+      "current_rewards": [],
+      "pools_yield_native_token": null,
+      "params": {
+        "quote_symbol": "usdk",
+        "create_pool_fee": {
+          "denom": "okt",
+          "amount": "0.000000000000000000"
+        },
+        "create_pool_deposit": {
+          "denom": "okt",
+          "amount": "0.000000000000000000"
+        },
+        "yield_native_token": false
       }
     },
     "upgrade": {},
@@ -1979,36 +1976,72 @@
         }
       ]
     },
-    "distribution": {
+    "evm": {
+      "accounts": [],
+      "txs_logs": [],
+      "chain_config": {
+        "homestead_block": "0",
+        "dao_fork_block": "0",
+        "dao_fork_support": true,
+        "eip150_block": "0",
+        "eip150_hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "eip155_block": "0",
+        "eip158_block": "0",
+        "byzantium_block": "0",
+        "constantinople_block": "0",
+        "petersburg_block": "0",
+        "istanbul_block": "0",
+        "muir_glacier_block": "0",
+        "yoloV2_block": "-1",
+        "ewasm_block": "-1"
+      },
       "params": {
-        "community_tax": "0.020000000000000000",
-        "withdraw_addr_enabled": true
-      },
-      "fee_pool": {
-        "community_pool": []
-      },
-      "delegator_withdraw_infos": [],
-      "previous_proposer": "",
-      "validator_accumulated_commissions": []
-    },
-    "crisis": {
-      "constant_fee": {
-        "denom": "okt",
-        "amount": "1000.000000000000000000"
+        "evm_denom": "okt",
+        "enable_create": false,
+        "enable_call": false,
+        "extra_eips": null
       }
     },
-    "slashing": {
+    "token": {
       "params": {
-        "signed_blocks_window": "10000",
-        "min_signed_per_window": "0.050000000000000000",
-        "downtime_jail_duration": "600000000000",
-        "slash_fraction_double_sign": "0.000000000000000000",
-        "slash_fraction_downtime": "0.000000000000000000"
+        "issue_fee": {
+          "denom": "okt",
+          "amount": "0.000000000000000000"
+        },
+        "mint_fee": {
+          "denom": "okt",
+          "amount": "0.000000000000000000"
+        },
+        "burn_fee": {
+          "denom": "okt",
+          "amount": "0.000000000000000000"
+        },
+        "modify_fee": {
+          "denom": "okt",
+          "amount": "0.000000000000000000"
+        },
+        "transfer_ownership_fee": {
+          "denom": "okt",
+          "amount": "0.000000000000000000"
+        },
+        "ownership_confirm_window": "86400000000000"
       },
-      "signing_infos": {},
-      "missed_blocks": {}
+      "tokens": [
+        {
+          "description": "OKExChain Native Token",
+          "symbol": "okt",
+          "original_symbol": "okt",
+          "whole_name": "OKT",
+          "original_total_supply": "10000000.000000000000000000",
+          "type": "0",
+          "owner": "okexchain1zv0j2tf3ydze9leajgawrgn74l974pgyftad4a",
+          "mintable": false
+        }
+      ],
+      "locked_assets": null,
+      "locked_fees": null
     },
-    "stream": null,
+    "debug": null,
     "gov": {
       "starting_proposal_id": "1",
       "deposits": null,
@@ -2033,39 +2066,6 @@
         "veto": "0.334000000000000000",
         "yes_in_vote_period": "0.667000000000000000"
       }
-    },
-    "dex": {
-      "params": {
-        "list_fee": {
-          "denom": "okt",
-          "amount": "1000.000000000000000000"
-        },
-        "transfer_ownership_fee": {
-          "denom": "okt",
-          "amount": "0.000000000000000000"
-        },
-        "register_operator_fee": {
-          "denom": "okt",
-          "amount": "0.000000000000000000"
-        },
-        "delist_max_deposit_period": "86400000000000",
-        "delist_min_deposit": [
-          {
-            "denom": "okt",
-            "amount": "10.000000000000000000"
-          }
-        ],
-        "delist_voting_period": "259200000000000",
-        "withdraw_period": "259200000000000",
-        "ownership_confirm_window": "86400000000000"
-      },
-      "token_pairs": null,
-      "withdraw_infos": null,
-      "product_locks": {
-        "Data": {}
-      },
-      "operators": null,
-      "max_token_pair_id": "0"
     }
   }
 }
