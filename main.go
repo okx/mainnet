@@ -382,7 +382,7 @@ func makeGenesisDoc(cdc *amino.Codec,
 	if err != nil {
 		panic(err)
 	}
-	genesisDoc.AppState = appStateJSON
+	genesisDoc.AppState = sdk.MustSortJSON(appStateJSON)
 	return genesisDoc
 }
 
