@@ -13,13 +13,13 @@ To get started with the latest mainnet, see the
 Source Code: [latest released version](https://github.com/okex/okexchain/releases/tag/v0.16.0)
 
 ⚠️ Latest mainnet: [okexchain v0.16.0](https://github.com/okex/okexchain/releases/tag/v0.16.0) ⚠️
-* *Jan 6, 2021 11:19 UTC* - okexchain-v0.16
+* *Jan 15, 2021 12:00 UTC* - okexchain-v0.16
 
 Download the [genesis file](https://raw.githubusercontent.com/okex/mainnet/main/genesis.json)
 
 ```bash
 $ shasum -a 256 genesis.json
-fc5203c459d527a426b2dd3b43e8112e1d33eb1727cca0996d5a75f457f4c52d  genesis.json
+194a15583c071b7ab92d777a85bbae75926772d105de86a98dbf5c70e90246cf  genesis.json
 ```
 Please read [GENESIS.md](GENESIS.md) for details on how it was generated and
 to recompute it for yourself.
