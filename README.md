@@ -19,7 +19,7 @@ Download the [genesis file](https://raw.githubusercontent.com/okex/mainnet/main/
 
 ```bash
 $ shasum -a 256 genesis.json
-194a15583c071b7ab92d777a85bbae75926772d105de86a98dbf5c70e90246cf  genesis.json
+1705b40f65f9f77083658a12e557e3225ecba529ec1328dcb08c0df1d4e42125  genesis.json
 ```
 Please read [GENESIS.md](GENESIS.md) for details on how it was generated and
 to recompute it for yourself.
