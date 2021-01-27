@@ -10,10 +10,10 @@ To get started with the latest mainnet, see the
 [docs](https://okexchain-docs.readthedocs.io/en/latest/getting-start/join-okexchain-mainnet.html).
 
 ## mainnet Status
-Source Code: [latest released version](https://github.com/okex/okexchain/releases/tag/v0.16.0)
+Source Code: [latest released version](https://github.com/okex/okexchain/releases/tag/v0.16.3)
 
-⚠️ Latest mainnet: [okexchain v0.16.0](https://github.com/okex/okexchain/releases/tag/v0.16.0) ⚠️
-* *Jan 15, 2021 12:00 UTC* - okexchain-v0.16
+⚠️ Latest mainnet: [okexchain v0.16.3](https://github.com/okex/okexchain/releases/tag/v0.16.3) ⚠️
+* *Jan 15, 2021 12:00 UTC* - okexchain-v0.16.3
 
 Download the [genesis file](https://raw.githubusercontent.com/okex/mainnet/main/genesis.json)
 
