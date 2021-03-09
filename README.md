@@ -31,9 +31,10 @@ $ shasum -a 256 ~/.okexchaind/config/genesis.json
 ```
 
 ## Startup an okexchain full node by the mainnet snapshot data
+- Build okexchaind by [the latest released version v0.16.3](https://github.com/okex/okexchain/releases/tag/v0.16.3)
 
+- Start mainnet with the okexchaind binary
 ```
-
 okexchaind init your_custom_moniker --chain-id okexchain-66 --home ~/.okexchaind
 
 rm -rf ~/.okexchaind/data
