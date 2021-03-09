@@ -10,7 +10,7 @@ To get started with the latest mainnet, see the
 [docs](https://okexchain-docs.readthedocs.io/en/latest/getting-start/join-okexchain-mainnet.html).
 
 ## Startup an okexchain full node for mainnet
-- Build okexchaind by [the latest released version](https://github.com/okex/okexchain/releases/tag/v0.16.3)
+- Build okexchaind by [the latest released version v0.16.3](https://github.com/okex/okexchain/releases/tag/v0.16.3)
 
 - Start mainnet with the okexchaind binary
 ```
