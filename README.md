@@ -9,8 +9,15 @@ does not get bogged down with large genesis files and status updates.
 To get started with the latest mainnet, see the
 [docs](https://okexchain-docs.readthedocs.io/en/latest/getting-start/join-okexchain-mainnet.html).
 
-## Startup an okexchain full node by the genesis.json file
-- Build okexchaind by [the latest released version v0.16.3](https://github.com/okex/okexchain/releases/tag/v0.16.3)
+## Build okexchaind binary
+Build okexchaind by [the latest released version v0.16.3](https://github.com/okex/okexchain/releases/tag/v0.16.3)
+
+## Startup an okexchain full node
+2 ways to startup an okexchain full node 
+- by the genesis.json file
+- by the mainnet snapshot data
+- 
+### 1. By the genesis.json file
 
 - Start mainnet with the okexchaind binary
 ```
@@ -30,7 +37,7 @@ $ shasum -a 256 ~/.okexchaind/config/genesis.json
 1705b40f65f9f77083658a12e557e3225ecba529ec1328dcb08c0df1d4e42125  ~/.okexchaind/config/genesis.json
 ```
 
-## Startup an okexchain full node by the mainnet snapshot data
+### 2. By the mainnet snapshot data
 - Build okexchaind by [the latest released version v0.16.3](https://github.com/okex/okexchain/releases/tag/v0.16.3)
 
 - Start mainnet with the okexchaind binary
