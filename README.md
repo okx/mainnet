@@ -16,7 +16,7 @@ Build okexchaind by [the latest released version v0.16.3](https://github.com/oke
 2 ways to startup an okexchain full node 
 - by the genesis.json file
 - by the mainnet snapshot data
-- 
+
 ### 1. By the genesis.json file
 
 - Start mainnet with the okexchaind binary
@@ -38,8 +38,6 @@ $ shasum -a 256 ~/.okexchaind/config/genesis.json
 ```
 
 ### 2. By the mainnet snapshot data
-- Build okexchaind by [the latest released version v0.16.3](https://github.com/okex/okexchain/releases/tag/v0.16.3)
-
 - Start mainnet with the okexchaind binary
 ```
 okexchaind init your_custom_moniker --chain-id okexchain-66 --home ~/.okexchaind
