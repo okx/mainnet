@@ -18,19 +18,19 @@ To get started with the latest mainnet, see the
 ```
    1. git clone -b v0.16.3.1 https://github.com/okex/exchain.git
    2. make install
-   3. exchaind export --home /data/okexchaind --height=H --for-zero-height --log_level evm:debug --log_file ./export.log --log_stdout=false > /data/okexchaind/config/genesis_no_migrate.json
+   3. exchaind export --home ${EXCHAIND_PATH} --height=H --for-zero-height --log_level evm:debug --log_file ./export.log --log_stdout=false > ${EXCHAIND_PATH}/config/genesis_no_migrate.json
    4. git checkout v0.18.0
    5. make GenesisHeight=H install
-   6.exchaind migrate v0.18 /data/okexchaind/config/genesis_no_migrate.json --chain-id=exchain66 > genesis.json
+   6.exchaind migrate v0.18 ${EXCHAIND_PATH}/config/genesis_no_migrate.json --chain-id=exchain66 > genesis.json
 ```
 #### 2.2 Download from official
 ```
-   wget https://raw.githubusercontent.com/okex/mainnet/main/genesis.json -O ~/.okexchaind/config/genesis.json
+   wget https://raw.githubusercontent.com/okex/mainnet/main/genesis.json -O ${EXCHAIND_PATH}/config/genesis.json
 ```
 Note: it needs to check genesis.json no matter which way is used
 ```
 $ shasum -a 256 ~/.okexchaind/config/genesis.json
-1705b40f65f9f77083658a12e557e3225ecba529ec1328dcb08c0df1d4e42125  ~/.okexchaind/config/genesis.json
+1705b40f65f9f77083658a12e557e3225ecba529ec1328dcb08c0df1d4e42125  ${EXCHAIND_PATH}/config/genesis.json
 ```
 ### 4. Build exchaind binary
 Build exchaind by [the latest released version v0.18.0](https://github.com/okex/exchain/releases/tag/v0.18.0)
@@ -48,18 +48,18 @@ Build exchaind by [the latest released version v0.18.0](https://github.com/okex/
 ### 2. Start mainnet with the okexchaind binary
 
 ```
-exchaind init your_custom_moniker --chain-id exchain-66 --home ~/.exchaind
+exchaind init your_custom_moniker --chain-id exchain-66 --home ${EXCHAIND_PATH}
 
-wget https://raw.githubusercontent.com/okex/mainnet/main/genesis.json -O ~/.exchaind/config/genesis.json
+wget https://raw.githubusercontent.com/okex/mainnet/main/genesis.json -O ${EXCHAIND_PATH}/config/genesis.json
 
 export OKEXCHAIN_SEEDS="e926c8154a2af4390de02303f0977802f15eafe2@3.16.103.80:26656,7fa5b1d1f1e48659fa750b6aec702418a0e75f13@35.177.8.240:26656,c8f32b793871b56a11d94336d9ce6472f893524b@18.167.16.85:26656"
 
-exchaind start --chain-id exchain-66 --home ~/.exchaind --p2p.seeds $OKEXCHAIN_SEEDS
+exchaind start --chain-id exchain-66 --home ${EXCHAIND_PATH} --p2p.seeds $OKEXCHAIN_SEEDS
 ```
 
 Note: it needs to check the [genesis file](https://raw.githubusercontent.com/okex/mainnet/main/genesis.json)
 
 ```bash
-$ shasum -a 256 ~/.exchaind/config/genesis.json
-1705b40f65f9f77083658a12e557e3225ecba529ec1328dcb08c0df1d4e42125  ~/.exchaind/config/genesis.json
+$ shasum -a 256 ${EXCHAIND_PATH}/config/genesis.json
+1705b40f65f9f77083658a12e557e3225ecba529ec1328dcb08c0df1d4e42125  ${EXCHAIND_PATH}/config/genesis.json
 ```
