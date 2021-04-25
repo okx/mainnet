@@ -18,9 +18,9 @@ To get started with the latest mainnet, see the
 ```
    1. git clone -b v0.16.3.1 https://github.com/okex/exchain.git
    2. make install
-   3. exchaind export --home ${EXCHAIND_PATH} --height=H --for-zero-height --log_level evm:debug --log_file ./export.log --log_stdout=false > ${EXCHAIND_PATH}/config/genesis_no_migrate.json
+   3. exchaind export --home ${EXCHAIND_PATH} --height=2322600 --for-zero-height --log_level evm:debug --log_file ./export.log --log_stdout=false > ${EXCHAIND_PATH}/config/genesis_no_migrate.json
    4. git checkout v0.18.0
-   5. make GenesisHeight=H install
+   5. make GenesisHeight=2322600 install
    6.exchaind migrate v0.18 ${EXCHAIND_PATH}/config/genesis_no_migrate.json --chain-id=exchain66 > genesis.json
 ```
 #### 2.2 Download from official
