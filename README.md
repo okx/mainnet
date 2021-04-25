@@ -34,7 +34,8 @@ ${genesis_of_2322600_shasum}  ${EXCHAIND_PATH}/config/genesis.json
 ```
 ### 4. Build exchaind binary
 Build exchaind by [the latest released version v0.18.0](https://github.com/okex/exchain/releases/tag/v0.18.0)
-
+   1. git clone -b v0.18.0 https://github.com/okex/exchain.git
+   2. make GenesisHeight=2322600 install
 ### 5. Reset data
 `exchaind unsafe-reset-all --home /data/okexchaind`
 ### 6. Start
