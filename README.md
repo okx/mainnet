@@ -12,7 +12,7 @@ To get started with the latest mainnet, see the
 
 ## Upgrade an exchain full node base on v0.16.3
 
-### 1. Stop exchain  full node ,and start exchain with 'halt-height = H'
+### 1. Stop exchain  full node ,and start exchain with 'halt-height = 2322600'
 ### 2. two ways to get the genesis.json file
 #### 2.1 Export by exchaind
 ```
