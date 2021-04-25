@@ -21,6 +21,7 @@ export EXCHAIND_PATH=~/.okexchaind (If your directory is not ~/.okexchaind, spec
 ```
    cd ${EXCHAIND_PATH}
    git clone -b v0.16.3.1 https://github.com/okex/exchain.git
+   cd exchain
    make install
    okexchaind export --home ${EXCHAIND_PATH} --height=2322600 --for-zero-height --log_level evm:debug --log_file ./export.log --log_stdout=false > ${EXCHAIND_PATH}/config/genesis_no_migrate.json
    git checkout v0.18.1
@@ -41,6 +42,7 @@ Build exchaind by [the latest released version v0.18.1](https://github.com/okex/
 ```
    cd ${EXCHAIND_PATH}
    git clone -b v0.18.1 https://github.com/okex/exchain.git
+   cd exchain
    make GenesisHeight=2322600 install
 ```
 ### 4. Reset data
