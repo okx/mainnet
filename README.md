@@ -30,7 +30,7 @@ To get started with the latest mainnet, see the
 Note: it needs to check genesis.json no matter which way is used
 ```
 $ shasum -a 256 ~/.okexchaind/config/genesis.json
-1705b40f65f9f77083658a12e557e3225ecba529ec1328dcb08c0df1d4e42125  ${EXCHAIND_PATH}/config/genesis.json
+${genesis_of_2322600_shasum}  ${EXCHAIND_PATH}/config/genesis.json
 ```
 ### 4. Build exchaind binary
 Build exchaind by [the latest released version v0.18.0](https://github.com/okex/exchain/releases/tag/v0.18.0)
