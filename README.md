@@ -75,3 +75,31 @@ Note: it needs to check the [genesis file](https://raw.githubusercontent.com/oke
 $ shasum -a 256 ${EXCHAIND_PATH}/config/genesis.json
 0958b6c9f5f125d1d6b8f56e042fa8a71b1880310227b8b2f27ba93ff7cd673b  ${EXCHAIND_PATH}/config/genesis.json
 ```
+
+## Startup an exchain full node with docker
+### 1. make the data dir
+```shell
+mkdir -p ~/.exchaind/data
+echo '{\n"height": "0",\n"round": "0",\n"step": 0\n}' > ~/.exchaind/data/priv_validator_state.json
+```
+
+### 2. run docker image
+```shell
+docker run -d --name exchain-mainnet-fullnode -v ~/.exchaind/data:/root/.exchaind/data/ -p 8545:8545 -p 26656:26656 okexchain/fullnode-mainnet:latest
+```
+
+### 3. check log
+```shell
+docker logs --tail 100 -f exchain-mainnet-fullnode
+```
+
+### 4. stop and remove the docker container
+```shell
+docker rm -f exchain-mainnet-fullnode
+```
+
+### 5. restart
+You can restart in the previous data dir
+```shell
+docker run -d --name exchain-mainnet-fullnode -v ~/.exchaind/data:/root/.exchaind/data/ -p 8545:8545 -p 26656:26656 okexchain/fullnode-mainnet:latest
+```
