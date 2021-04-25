@@ -35,7 +35,7 @@ export EXCHAIND_PATH=~/.okexchaind (If your directory is not ~/.okexchaind, spec
 Note: it needs to check genesis.json no matter which way is used
 ```
 $ shasum -a 256 ${EXCHAIND_PATH}/config/genesis.json
-${genesis_of_2322600_shasum}  ${EXCHAIND_PATH}/config/genesis.json
+0958b6c9f5f125d1d6b8f56e042fa8a71b1880310227b8b2f27ba93ff7cd673b  ${EXCHAIND_PATH}/config/genesis.json
 ```
 ### 3. Build exchaind binary
 Build exchaind by [the latest released version v0.18.1](https://github.com/okex/exchain/releases/tag/v0.18.1)
@@ -73,5 +73,5 @@ Note: it needs to check the [genesis file](https://raw.githubusercontent.com/oke
 
 ```bash
 $ shasum -a 256 ${EXCHAIND_PATH}/config/genesis.json
-${genesis_of_2322600_shasum}  ${EXCHAIND_PATH}/config/genesis.json
+0958b6c9f5f125d1d6b8f56e042fa8a71b1880310227b8b2f27ba93ff7cd673b  ${EXCHAIND_PATH}/config/genesis.json
 ```
