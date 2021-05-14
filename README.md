@@ -4,21 +4,21 @@ This repo collects the genesis and configuration files for the various ExChain
 mainnet. It exists so the [ExChain repo](https://github.com/okex/exchain)
 does not get bogged down with large genesis files and status updates.
 
-## Getting Started
-
-To get started with the latest mainnet, see the
-[docs](https://okexchain-docs.readthedocs.io/en/latest/getting-start/join-okexchain-mainnet.html).
-
 
 ## Startup an exchain full node by the exchaind binary
+
 ### 1. Build exchaind by [the latest released version v0.18.3.1](https://github.com/okex/exchain/releases/tag/v0.18.3.1)
 ```
-export EXCHAIND_PATH=~/.exchaind (You can also specify other directory)
+git clone -b v0.18.3.1 https://github.com/okex/exchain.git
+cd exchain
+make GenesisHeight=2322600 install
 ```
 
 ### 2. Start full node
 
 ```
+export EXCHAIND_PATH=~/.exchaind (You can also specify other directory)
+
 exchaind init your_custom_moniker --chain-id exchain-66 --home ${EXCHAIND_PATH}
 
 wget https://raw.githubusercontent.com/okex/mainnet/main/genesis.json -O ${EXCHAIND_PATH}/config/genesis.json
