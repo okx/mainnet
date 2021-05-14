@@ -71,11 +71,13 @@ docker run -d --name exchain-mainnet-fullnode -v ~/.exchaind/data:/root/.exchain
 ### 2. Build exchaind binary
 Build exchaind by [the latest released version v0.18.3.1](https://github.com/okex/exchain/releases/tag/v0.18.3.1)
 ```
-   cd ${EXCHAIND_PATH}
    git clone -b v0.18.3.1 https://github.com/okex/exchain.git
    cd exchain
    make GenesisHeight=2322600 install
 ```
 ### 3. Start
-`exchaind start --chain-id exchain-66 --home ${EXCHAIND_PATH}`
+```
+export EXCHAIND_PATH=~/.exchaind (You can also specify other directory)
+exchaind start --chain-id exchain-66 --home ${EXCHAIND_PATH}
+```
 
