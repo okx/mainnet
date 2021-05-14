@@ -21,9 +21,7 @@ Build exchaind by [the latest released version v0.18.3.1](https://github.com/oke
    cd exchain
    make GenesisHeight=2322600 install
 ```
-### 3. Reset data
-`exchaind unsafe-reset-all --home ${EXCHAIND_PATH}`
-### 4. Start
+### 3. Start
 `exchaind start --chain-id exchain-66 --home ${EXCHAIND_PATH}`
 
 
