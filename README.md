@@ -10,28 +10,13 @@ To get started with the latest mainnet, see the
 [docs](https://okexchain-docs.readthedocs.io/en/latest/getting-start/join-okexchain-mainnet.html).
 
 
-## Upgrade an exchain full node base on v0.18.3.1
-
-### 1. Stop exchain  full node
-### 2. Build exchaind binary
-Build exchaind by [the latest released version v0.18.3.1](https://github.com/okex/exchain/releases/tag/v0.18.3.1)
-```
-   cd ${EXCHAIND_PATH}
-   git clone -b v0.18.3.1 https://github.com/okex/exchain.git
-   cd exchain
-   make GenesisHeight=2322600 install
-```
-### 3. Start
-`exchaind start --chain-id exchain-66 --home ${EXCHAIND_PATH}`
-
-
-## Startup an exchain full node by the genesis.json file
+## Startup an exchain full node by the exchaind binary
 ### 1. Build exchaind by [the latest released version v0.18.3.1](https://github.com/okex/exchain/releases/tag/v0.18.3.1)
 ```
 export EXCHAIND_PATH=~/.exchaind (You can also specify other directory)
 ```
 
-### 2. Start mainnet with the exchaind binary
+### 2. Start full node
 
 ```
 exchaind init your_custom_moniker --chain-id exchain-66 --home ${EXCHAIND_PATH}
@@ -49,6 +34,7 @@ Note: it needs to check the [genesis file](https://raw.githubusercontent.com/oke
 $ shasum -a 256 ${EXCHAIND_PATH}/config/genesis.json
 0958b6c9f5f125d1d6b8f56e042fa8a71b1880310227b8b2f27ba93ff7cd673b  ${EXCHAIND_PATH}/config/genesis.json
 ```
+
 
 ## Startup an exchain full node with docker
 ### 1. make the data dir
@@ -77,3 +63,19 @@ You can restart in the previous data dir
 ```shell
 docker run -d --name exchain-mainnet-fullnode -v ~/.exchaind/data:/root/.exchaind/data/ -p 8545:8545 -p 26656:26656 okexchain/fullnode-mainnet:latest
 ```
+
+
+## Upgrade an exchain full node to v0.18.3.1
+
+### 1. Stop exchain  full node
+### 2. Build exchaind binary
+Build exchaind by [the latest released version v0.18.3.1](https://github.com/okex/exchain/releases/tag/v0.18.3.1)
+```
+   cd ${EXCHAIND_PATH}
+   git clone -b v0.18.3.1 https://github.com/okex/exchain.git
+   cd exchain
+   make GenesisHeight=2322600 install
+```
+### 3. Start
+`exchaind start --chain-id exchain-66 --home ${EXCHAIND_PATH}`
+
