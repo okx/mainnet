@@ -10,7 +10,7 @@ To get started with the latest mainnet, see the
 [docs](https://okexchain-docs.readthedocs.io/en/latest/getting-start/join-okexchain-mainnet.html).
 
 
-## Upgrade an exchain full node base on v0.18.4
+## Upgrade an exchain full node base on v0.18.3.1
 
 ### 1. Stop exchain  full node ,and start exchain with 'halt-height = 2322600'
 ### 2. two ways to get the genesis.json file
