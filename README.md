@@ -12,32 +12,8 @@ To get started with the latest mainnet, see the
 
 ## Upgrade an exchain full node base on v0.18.3.1
 
-### 1. Stop exchain  full node ,and start exchain with 'halt-height = 2322600'
-### 2. two ways to get the genesis.json file
-```
-export EXCHAIND_PATH=~/.exchaind (If your directory is not ~/.exchaind, specify your own directory)
-```
-#### 2.1 Export by exchaind
-```
-   cd ${EXCHAIND_PATH}
-   git clone -b v0.16.3.1 https://github.com/okex/exchain.git
-   cd exchain
-   make install
-   exchaind export --home ${EXCHAIND_PATH} --height=2322600 --for-zero-height --log_level evm:debug --log_file ./export.log --log_stdout=false > ${EXCHAIND_PATH}/config/genesis_no_migrate.json
-   git checkout v0.18.3.1
-   make GenesisHeight=2322600 install
-   exchaind migrate v0.18 ${EXCHAIND_PATH}/config/genesis_no_migrate.json --chain-id=exchain66 > ${EXCHAIND_PATH}/config/genesis.json
-```
-#### 2.2 Download genesis.json
-```
-   wget https://raw.githubusercontent.com/okex/mainnet/main/genesis.json -O ${EXCHAIND_PATH}/config/genesis.json
-```
-Note: it needs to check genesis.json no matter which way is used
-```
-$ shasum -a 256 ${EXCHAIND_PATH}/config/genesis.json
-0958b6c9f5f125d1d6b8f56e042fa8a71b1880310227b8b2f27ba93ff7cd673b  ${EXCHAIND_PATH}/config/genesis.json
-```
-### 3. Build exchaind binary
+### 1. Stop exchain  full node
+### 2. Build exchaind binary
 Build exchaind by [the latest released version v0.18.3.1](https://github.com/okex/exchain/releases/tag/v0.18.3.1)
 ```
    cd ${EXCHAIND_PATH}
@@ -45,9 +21,9 @@ Build exchaind by [the latest released version v0.18.3.1](https://github.com/oke
    cd exchain
    make GenesisHeight=2322600 install
 ```
-### 4. Reset data
+### 3. Reset data
 `exchaind unsafe-reset-all --home ${EXCHAIND_PATH}`
-### 5. Start
+### 4. Start
 `exchaind start --chain-id exchain-66 --home ${EXCHAIND_PATH}`
 
 
