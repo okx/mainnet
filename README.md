@@ -7,9 +7,9 @@ does not get bogged down with large genesis files and status updates.
 
 ## Startup an exchain full node by the exchaind binary
 
-### 1. Build exchaind by [the latest released version v0.18.3.1](https://github.com/okex/exchain/releases/tag/v0.18.3.1)
+### 1. Build exchaind by [the latest released version v0.18.6](https://github.com/okex/exchain/releases/tag/v0.18.6)
 ```
-git clone -b v0.18.3.1 https://github.com/okex/exchain.git
+git clone -b v0.18.6 https://github.com/okex/exchain.git
 cd exchain
 make GenesisHeight=2322600 install
 ```
@@ -25,7 +25,7 @@ wget https://raw.githubusercontent.com/okex/mainnet/main/genesis.json -O ${EXCHA
 
 export EXCHAIN_SEEDS="e926c8154a2af4390de02303f0977802f15eafe2@3.16.103.80:26656,7fa5b1d1f1e48659fa750b6aec702418a0e75f13@35.177.8.240:26656,c8f32b793871b56a11d94336d9ce6472f893524b@18.167.16.85:26656"
 
-exchaind start --chain-id exchain-66 --home ${EXCHAIND_PATH} --p2p.seeds $EXCHAIN_SEEDS
+exchaind start --chain-id exchain-66 --mempool.sort_tx_by_gp true --home ${EXCHAIND_PATH} --p2p.seeds $EXCHAIN_SEEDS
 ```
 
 Note: it needs to check the [genesis file](https://raw.githubusercontent.com/okex/mainnet/main/genesis.json)
@@ -65,19 +65,19 @@ docker run -d --name exchain-mainnet-fullnode -v ~/.exchaind/data:/root/.exchain
 ```
 
 
-## Upgrade an exchain full node to v0.18.3.1
+## Upgrade an exchain full node to v0.18.6
 
 ### 1. Stop exchain  full node
 ### 2. Build exchaind binary
-Build exchaind by [the latest released version v0.18.3.1](https://github.com/okex/exchain/releases/tag/v0.18.3.1)
+Build exchaind by [the latest released version v0.18.6](https://github.com/okex/exchain/releases/tag/v0.18.6)
 ```
-git clone -b v0.18.3.1 https://github.com/okex/exchain.git
+git clone -b v0.18.6 https://github.com/okex/exchain.git
 cd exchain
 make GenesisHeight=2322600 install
 ```
 ### 3. Start
 ```
 export EXCHAIND_PATH=~/.exchaind (You can also specify other directory)
-exchaind start --chain-id exchain-66 --home ${EXCHAIND_PATH}
+exchaind start --chain-id exchain-66 --mempool.sort_tx_by_gp true --home ${EXCHAIND_PATH}
 ```
 
