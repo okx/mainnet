@@ -69,7 +69,7 @@ docker run -d --name exchain-mainnet-fullnode -v ~/.exchaind/data:/root/.exchain
 
 ### 1. Stop exchain  full node
 ### 2. Build exchaind binary
-Build exchaind by [the latest released version v0.18.6](https://github.com/okex/exchain/releases/tag/v0.18.10)
+Build exchaind by [the latest released version v0.18.10](https://github.com/okex/exchain/releases/tag/v0.18.10)
 ```
 git clone -b v0.18.10 https://github.com/okex/exchain.git
 cd exchain
