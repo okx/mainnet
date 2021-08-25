@@ -9,7 +9,7 @@ does not get bogged down with large genesis files and status updates.
 
 ### 1. Build exchaind by [the latest released version](https://github.com/okex/exchain/releases/latest)
 ```
-git clone -b latest_version https://github.com/okex/exchain.git  # latest_version可以通过链接 https://github.com/okex/exchain/releases/latest 查看
+git clone -b latest_version https://github.com/okex/exchain.git  # latest_version refers to https://github.com/okex/exchain/releases/latest
 cd exchain
 make mainnet
 ```
@@ -71,7 +71,7 @@ docker run -d --name exchain-mainnet-fullnode -v ~/.exchaind/data:/root/.exchain
 ### 2. Build exchaind binary
 Build exchaind by [the latest released version](https://github.com/okex/exchain/releases/latest)
 ```
-git clone -b latest_version https://github.com/okex/exchain.git  # latest_version可以通过链接 https://github.com/okex/exchain/releases/latest 查看
+git clone -b latest_version https://github.com/okex/exchain.git  # latest_version refers to https://github.com/okex/exchain/releases/latest
 cd exchain
 make mainnet
 ```
