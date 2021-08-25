@@ -7,11 +7,11 @@ does not get bogged down with large genesis files and status updates.
 
 ## Startup an exchain full node by the exchaind binary
 
-### 1. Build exchaind by [the latest released version v0.18.6](https://github.com/okex/exchain/releases/tag/v0.18.6)
+### 1. Build exchaind by [the latest released version](https://github.com/okex/exchain/releases/latest)
 ```
-git clone -b v0.18.6 https://github.com/okex/exchain.git
+git clone -b latest_version https://github.com/okex/exchain.git  # latest_version可以通过链接 https://github.com/okex/exchain/releases/latest 查看
 cd exchain
-make GenesisHeight=2322600 install
+make mainnet
 ```
 
 ### 2. Start full node
@@ -65,15 +65,15 @@ docker run -d --name exchain-mainnet-fullnode -v ~/.exchaind/data:/root/.exchain
 ```
 
 
-## Upgrade an exchain full node to v0.18.6
+## Upgrade an exchain full node to latest
 
 ### 1. Stop exchain  full node
 ### 2. Build exchaind binary
-Build exchaind by [the latest released version v0.18.6](https://github.com/okex/exchain/releases/tag/v0.18.6)
+Build exchaind by [the latest released version](https://github.com/okex/exchain/releases/latest)
 ```
-git clone -b v0.18.6 https://github.com/okex/exchain.git
+git clone -b latest_version https://github.com/okex/exchain.git  # latest_version可以通过链接 https://github.com/okex/exchain/releases/latest 查看
 cd exchain
-make GenesisHeight=2322600 install
+make mainnet
 ```
 ### 3. Start
 ```
