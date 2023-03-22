@@ -20,7 +20,11 @@ make mainnet
 export EXCHAIND_PATH=~/.exchaind (You can also specify other directory)
 
 exchaind init your_custom_moniker --chain-id exchain-66 --home ${EXCHAIND_PATH}
+```
 
+#### 2.1. Using genesis.json file
+If you want to synchronize blocks from Genesis block, use the genesis.json file.
+```
 wget https://raw.githubusercontent.com/okex/mainnet/main/genesis.json -O ${EXCHAIND_PATH}/config/genesis.json
 
 exchaind start --chain-id exchain-66 --home ${EXCHAIND_PATH}
@@ -32,7 +36,21 @@ Note: it needs to check the [genesis file](https://raw.githubusercontent.com/oke
 $ shasum -a 256 ${EXCHAIND_PATH}/config/genesis.json
 0958b6c9f5f125d1d6b8f56e042fa8a71b1880310227b8b2f27ba93ff7cd673b  ${EXCHAIND_PATH}/config/genesis.json
 ```
+#### 2.2. Using snapshots
+If you want to quickly sync to the latest block, use the snapshot.
+[Snapshot link](https://forum.okt.club/d/154)
 
+```
+# download [snapshot](https://forum.okt.club/d/154)
+rm -rf ${EXCHAIND_PATH}/data
+cd ${EXCHAIND_PATH}
+wget https://okg-pub-hk.oss-cn-hongkong.aliyuncs.com/cdn/okc/snapshot/mainnet-$version-$date-$height-rocksdb.tar.gz
+tar -zxvf mainnet-$version-$date-$height-rocksdb.tar.gz
+```
+#### 2.3. Start the node
+```
+exchaind start --chain-id exchain-66 --home ${EXCHAIND_PATH}
+```
 
 ## Startup an exchain full node with docker
 ### 1. make the data dir
