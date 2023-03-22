@@ -41,7 +41,7 @@ If you want to quickly sync to the latest block, use the snapshot.
 [Snapshot link](https://forum.okt.club/d/380-the-latest-snapshots-of-mainnet-and-testnet)
 
 ```
-# download [snapshot](https://forum.okt.club/d/154)
+# download snapshot
 rm -rf ${EXCHAIND_PATH}/data
 cd ${EXCHAIND_PATH}
 wget https://okg-pub-hk.oss-cn-hongkong.aliyuncs.com/cdn/okc/snapshot/mainnet-$version-$date-$height-rocksdb.tar.gz
