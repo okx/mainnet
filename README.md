@@ -38,7 +38,7 @@ $ shasum -a 256 ${EXCHAIND_PATH}/config/genesis.json
 ```
 #### 2.2. Using snapshots
 If you want to quickly sync to the latest block, use the snapshot.
-[Snapshot link](https://forum.okt.club/d/154)
+[Snapshot link](https://forum.okt.club/d/380-the-latest-snapshots-of-mainnet-and-testnet)
 
 ```
 # download [snapshot](https://forum.okt.club/d/154)
