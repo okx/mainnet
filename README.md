@@ -14,7 +14,10 @@ cd exchain
 make mainnet
 ```
 
-### 2. Start full node
+### 2. Startup a full node by the snapshot(recommended)
+
+
+### 3. Startup a full node by the Genesis block (taking long, not recommended)
 
 ```
 export EXCHAIND_PATH=~/.exchaind (You can also specify other directory)
@@ -32,6 +35,7 @@ Note: it needs to check the [genesis file](https://raw.githubusercontent.com/oke
 $ shasum -a 256 ${EXCHAIND_PATH}/config/genesis.json
 0958b6c9f5f125d1d6b8f56e042fa8a71b1880310227b8b2f27ba93ff7cd673b  ${EXCHAIND_PATH}/config/genesis.json
 ```
+
 
 
 ## Startup an exchain full node with docker
