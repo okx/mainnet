@@ -14,10 +14,23 @@ cd exchain
 make mainnet
 ```
 
-### 2. Startup a full node by the snapshot(recommended)
+### 2. Startup a full node by a [snapshot](https://static.okex.org/cdn/okc/snapshot/index.html). (recommended)
+```
+# 1. Initialize exchain node configurations
+export EXCHAIND_PATH=~/.exchaind (or a cutomized one)
+exchaind init your_custom_moniker --chain-id exchain-66 --home ${EXCHAIND_PATH}
 
+# 2. download snapshot
+rm -rf ${EXCHAIND_PATH}/data
+cd ${EXCHAIND_PATH}
+wget https://okg-pub-hk.oss-cn-hongkong.aliyuncs.com/cdn/okc/snapshot/mainnet-$version-$date-$height-rocksdb.tar.gz
+tar -zxvf mainnet-$version-$date-$height-rocksdb.tar.gz
 
-### 3. Startup a full node by the Genesis block (taking long, not recommended)
+# 3. start exchaind
+exchaind start --home ${EXCHAIND_PATH}
+```
+
+### 3. Startup a full node by the Genesis block. (taking long, not recommended)
 
 ```
 export EXCHAIND_PATH=~/.exchaind (You can also specify other directory)
