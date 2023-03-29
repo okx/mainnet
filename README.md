@@ -15,6 +15,11 @@ make mainnet
 ```
 
 ### 2. Startup a full node by a [snapshot](https://static.okex.org/cdn/okc/snapshot/index.html). (recommended)
+There are 3 types of snapshots:
+- s0: the most recent block and world state
+- s1: all historical blocks and the most recent world state
+- s3: all historical blocks and world states
+
 ```
 # 1. Initialize exchain node configurations
 export EXCHAIND_PATH=~/.exchaind (or a cutomized one)
