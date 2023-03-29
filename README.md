@@ -15,7 +15,7 @@ make mainnet
 ```
 
 ### 2. Startup a full node by a [snapshot](https://static.okex.org/cdn/okc/snapshot/index.html). (recommended)
-There are 3 types of snapshots:
+There are 3 types of snapshots and s0 is the one with minimum data size:
 - s0: the most recent block and world state
 - s1: all historical blocks and the most recent world state
 - s3: all historical blocks and world states
