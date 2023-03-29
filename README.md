@@ -7,9 +7,9 @@ does not get bogged down with large genesis files and status updates.
 
 ## Startup an exchain full node by the exchaind binary
 
-### 1. Build exchaind by [the latest released version](https://github.com/okex/exchain/releases/latest)
+### 1. Build exchaind by [the latest released version](https://github.com/okx/exchain/releases/latest)
 ```
-git clone -b latest_version https://github.com/okex/exchain.git  # latest_version refers to https://github.com/okex/exchain/releases/latest
+git clone -b latest_version https://github.com/okx/exchain.git  # latest_version refers to https://github.com/okx/exchain/releases/latest
 cd exchain
 make mainnet
 ```
