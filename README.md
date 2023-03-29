@@ -14,7 +14,28 @@ cd exchain
 make mainnet
 ```
 
-### 2. Start full node
+### 2. Startup a full node by a [snapshot](https://static.okex.org/cdn/okc/snapshot/index.html). (recommended)
+There are 3 types of snapshots and s0 is the one with minimum data size:
+- s0: the most recent block and world state
+- s1: all historical blocks and the most recent world state
+- s3: all historical blocks and world states
+
+```
+# 1. Initialize exchain node configurations
+export EXCHAIND_PATH=~/.exchaind (or a cutomized one)
+exchaind init your_custom_moniker --chain-id exchain-66 --home ${EXCHAIND_PATH}
+
+# 2. download snapshot
+rm -rf ${EXCHAIND_PATH}/data
+cd ${EXCHAIND_PATH}
+wget https://okg-pub-hk.oss-cn-hongkong.aliyuncs.com/cdn/okc/snapshot/mainnet-$version-$date-$height-rocksdb.tar.gz
+tar -zxvf mainnet-$version-$date-$height-rocksdb.tar.gz
+
+# 3. start exchaind
+exchaind start --home ${EXCHAIND_PATH}
+```
+
+### 3. Startup a full node by the Genesis block. (taking long, not recommended)
 
 ```
 export EXCHAIND_PATH=~/.exchaind (You can also specify other directory)
@@ -32,6 +53,7 @@ Note: it needs to check the [genesis file](https://raw.githubusercontent.com/oke
 $ shasum -a 256 ${EXCHAIND_PATH}/config/genesis.json
 0958b6c9f5f125d1d6b8f56e042fa8a71b1880310227b8b2f27ba93ff7cd673b  ${EXCHAIND_PATH}/config/genesis.json
 ```
+
 
 
 ## Startup an exchain full node with docker
