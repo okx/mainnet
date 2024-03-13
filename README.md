@@ -23,7 +23,7 @@ There are 3 types of snapshots and s0 is the one with minimum data size:
 
 ```
 # 1. Initialize exchain node configurations
-export EXCHAIND_PATH=~/.exchaind (or a cutomized one)
+export EXCHAIND_PATH=~/.exchaind (or a customized one)
 exchaind init your_custom_moniker --chain-id exchain-66 --home ${EXCHAIND_PATH}
 
 # 2. download snapshot
