@@ -47,3 +47,10 @@ Deregister a validator and withdraw staked assets. You will have to wait 14 days
 exchaincli tx staking destroy-validator --from ex1sxxxxx --gas auto --gas-prices 0.0000000001okt --gas-adjustment 1.3 -y  
 ```
 
+# 3. How to Build exchaincli
+```
+git clone -b v1.7.0.6 https://github.com/okx/exchain.git
+cd exchain; make install
+# Import mnemonic:
+exchaincli keys add --recover delegator1 -m "mnemonic" -y
+```
