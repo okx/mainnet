@@ -35,7 +35,7 @@ Please first execute the following voting operation, then run the above `withdra
 exchaincli tx staking add-shares exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xamv --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
 
-## 1.2 Using Wallet and Contract
+## 1.2 Using Wallet and Contract (Not Recommended)
 If you have been using wallet, please continue. If you previously used command line, this way is **not recommended**.
 
 Prerequisites: If you haven't installed wallet, [Get the wallet](https://web3.okx.com/)
