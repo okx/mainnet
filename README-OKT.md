@@ -2,6 +2,16 @@
 
 Simple ways to withdraw OKT or destroy validator
 
+## Table of Contents
+
+| Section | Description | Target Users |
+|---------|-------------|-------------|
+| [1. How to Withdraw OKT](#1-how-to-withdraw-okt) | Methods to withdraw OKT tokens | Stakers |
+| &nbsp;&nbsp;&nbsp;&nbsp;[1.1 Using Command Line](#11-using-command-line) | Command line withdrawal process | Stakers |
+| &nbsp;&nbsp;&nbsp;&nbsp;[1.2 Using Wallet and Contract](#12-using-wallet-and-contract) | Wallet and smart contract withdrawal | Stakers |
+| [2. How to Destroy Validator](#2-how-to-destroy-validator) | Process to deregister a validator | Validators |
+| [3. How to Build exchaincli](#3-how-to-build-exchaincli) | Build and setup exchaincli tool | All Users |
+
 # 1. How to Withdraw OKT
 
 ## 1.1 Using Command Line
