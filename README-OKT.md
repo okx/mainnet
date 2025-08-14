@@ -15,7 +15,7 @@ Simple ways to withdraw OKT or destroy validator
 # 1. How to Withdraw OKT
 
 ## 1.1 Using Command Line
-Prerequisites: If you haven't installed exchaincli, please refer to [How to Build exchaincli](#3-how-to-build-exchaincli)
+Prerequisites: If you haven't installed exchaincli, please refer to [How to Build exchaincli](#3-how-to-build-exchaincli). If you have already installed, please ensure it's version v1.7.0.6.
 
 ```
 // Withdraw an amount of OKT and the corresponding shares from all validators.
@@ -51,7 +51,7 @@ Please first use the voting function to re-vote, then perform withdraw again.
 
 Deregister a validator and withdraw staked assets. You will have to wait 14 days before your OKTs are fully unlocked and transferrable. This will also trigger a passive reward, which will automatically distribute the rewards to its own account.
 
-Prerequisites: If you haven't installed exchaincli, please refer to [How to Build exchaincli](#3-how-to-build-exchaincli)
+Prerequisites: If you haven't installed exchaincli, please refer to [How to Build exchaincli](#3-how-to-build-exchaincli). If you have already installed, please ensure it's version v1.7.0.6.
 
 ```
 exchaincli tx staking destroy-validator --from ex1sxxxxx --gas auto --gas-prices 0.0000000001okt --gas-adjustment 1.3 -y  
