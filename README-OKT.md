@@ -36,11 +36,11 @@ exchaincli tx staking add-shares exvaloper1xkl5agjzqnjnptyat2dng2asmx8g5kllg7xam
 ```
 
 ## 1.2 Using Wallet and Contract
-If you have been using wallet, please continue. If you previously used command line, this way is not recommended.
+If you have been using wallet, please continue. If you previously used command line, this way is **not recommended**.
 
 Prerequisites: If you haven't installed wallet, [Get the wallet](https://web3.okx.com/)
 
-You can use third-party web UI to directly perform withdraw operations. If you encounter the following error:
+You can use third-party web UI(**not recommended**) to directly perform withdraw operations. If you encounter the following error:
 ```
 failed. destroyed validator xxxxxx isn't allowed to add shares to. please get rid of it from the shares adding list by adding shares to other validators again or unbond all delegated tokens
 ```
